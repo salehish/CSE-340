@@ -1,6 +1,212 @@
-/******* Change Box Model ***************/
+/******* Base Resets & Box Model ***************/
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5;
+  color: #edeff7;
+}
+
+#wrapper {
+  overflow-x: hidden;
+}
+
+.content-wrapper {
+  padding: 1rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #012ca3;
+}
+.p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #012ca3;
+}
+
+.car-specs {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 30, 128);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.car-details {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.car-details h2 {
+  margin-bottom: 0.5rem;
+  color: #024ec0;
+}
+
+.car-details ul {
+  padding-left: 1rem;
+}
+
+.car-details ul li {
+  list-style-type: disc;
+  margin-bottom: 0.3rem;
+  color: #022ea7;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.action {
+  background-color: #047ef0;
+  color: #023bb6;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  width: fit-content;
+}
+
+.car-details-upgrades {
+  margin-top: 2rem;
+}
+
+.reviews-heading,
+.delorean-upgrades {
+  color: #0256f1;
+  margin-bottom: 1rem;
+}
+
+.car-parts ul {
+  padding-left: 1rem;
+  color: #043edd;
+}
+
+.car-parts ul li {
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+}
+
+.delorean-carUpgrades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.upgrade-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  width: 100%;
+  background-color: #000b6d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.6rem;
+  border-radius: 0.25rem;
+}
+
+.upgrade-image {
+  max-width: 80%;
+  height: auto;
+}
+
+.upgrade-detail {
+  margin-top: 0.5rem;
+  text-decoration: underline;
+  color: blue;
+}
+
+/******** Header & Navigation *********/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+header a {
+  text-decoration: none;
+  color: rgb(2, 10, 134);
+  font-weight: bold;
+}
+
+a.cse-motors {
+  font-size: 1.2rem;
+}
+
+a.my-account {
+  font-size: 0.9rem;
+}
+
+nav {
+  background-color: rgb(4, 62, 148);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0.6rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/******** Footer *********/
+footer p {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: black;
+}
+
+/******** Responsive Layout ********/
+@media screen and (min-width: 768px) {
+  .car-specs {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .car-details {
+    width: 40%;
+  }
+
+  .hero-image {
+    width: 55%;
+  }
+
+  .delorean-carUpgrades {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
